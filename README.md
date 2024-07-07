@@ -9,10 +9,11 @@
 5. [Usage](#usage)
 6. [Dataset](#dataset)
 7. [Model Training](#model-training)
-8. [Contributing](#contributing)
-9. [License](#license)
-10. [Acknowledgements](#acknowledgements)
-11. [Contact](#contact)
+8. [Proposed Model](#proposed-model)
+9. [Experimental Results](#experimental-results)
+10. [Contributing](#contributing)
+11. [Acknowledgements](#acknowledgements)
+12. [Contact](#contact)
 
 ## Overview
 
@@ -81,6 +82,57 @@ The dataset used in this project contains images of healthy and diseased plant l
 3. **Training**: The model is trained on the processed dataset using TensorFlow/Keras.
 4. **Evaluation**: Model performance is evaluated on the validation set and fine-tuned for optimal accuracy.
 
+## Proposed Model
+
+### Dataset
+- Plant village dataset with tomato samples, including six disorders.
+
+### Preprocessing
+1. **Conversion to Grayscale**:
+    - Grayscale images reduce complexity and enhance feature extraction.
+2. **Histogram Equalization (HE)**:
+    - Improves the contrast of the images.
+3. **K-means Clustering**:
+    - Segments the image into clusters to highlight the diseased regions.
+4. **Contour Tracing**:
+    - Detects the boundaries of diseased spots on the leaves.
+
+### Feature Extraction
+1. **Discrete Wavelet Transform (DWT)**:
+    - Decomposes the image into frequency components.
+2. **Principal Component Analysis (PCA)**:
+    - Reduces the dimensionality of the data, retaining the most important features.
+3. **Gray-Level Co-occurrence Matrix (GLCM)**:
+    - Extracts texture features from the image.
+
+### Classification
+1. **Support Vector Machine (SVM)**:
+    - Classifies the data by finding the hyperplane that best separates the classes.
+2. **K-Nearest Neighbors (K-NN)**:
+    - Classifies data points based on the majority class among the nearest neighbors.
+3. **Convolutional Neural Network (CNN)**:
+    - Deep learning model that automatically extracts features and classifies the images.
+
+### Evaluation Metrics
+- **Precision**:
+    - The ratio of correctly predicted positive observations to the total predicted positives.
+- **Recall**:
+    - The ratio of correctly predicted positive observations to all the observations in the actual class.
+- **F1 Score**:
+    - The weighted average of Precision and Recall.
+
+## Experimental Results
+The proposed model was tested on a tomato leaf disease dataset with 600 samples. The results are as follows:
+- **Healthy Leaf**: 99% accuracy.
+- **Mosaic Virus**: 100% accuracy.
+- **Leaf Mold**: 100% accuracy.
+- **Yellow Curl**: 99% accuracy.
+- **Spotted Spider Mite**: 99% accuracy.
+- **Target Spot**: 100% accuracy.
+- **Overall Accuracy**: 99.5%.
+
+The proposed model, using DWT, PCA, GLCM, and CNN, provides better accuracy compared to existing models.
+
 ## Contributing
 
 Contributions are welcome! Please follow these steps:
@@ -90,10 +142,6 @@ Contributions are welcome! Please follow these steps:
 3. Commit your changes (`git commit -am 'Add new feature'`).
 4. Push to the branch (`git push origin feature-branch`).
 5. Create a new Pull Request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
 
@@ -105,4 +153,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 For any inquiries, please contact:
 
 - Name: Sunhith Reddy
-- Email: sunhith@example.com
+- Email: iamtsr2004@gmail.com
+- Linkedin: www.linkedin.com/in/sunhith-reddy-t
+
+
