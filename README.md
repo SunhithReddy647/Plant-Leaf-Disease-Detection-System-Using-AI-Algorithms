@@ -28,10 +28,10 @@ This project aims to develop a system for detecting diseases in plant leaves usi
 
 ## Technologies Used
 
-- **Programming Languages**: Python
-- **Libraries**: TensorFlow, Keras, OpenCV, Scikit-Learn, NumPy, Pandas, Matplotlib
-- **Frameworks**: Flask for the web interface
-- **Tools**: Jupyter Notebook for experimentation and visualization
+- **Programming Languages**: JavaScript
+- **Libraries**: TensorFlow.js, Node.js, Express, Multer
+- **Frameworks**: Express for the web interface
+- **Tools**: Jupyter Notebook for experimentation and visualization (if using Python for training)
 
 ## Installation
 
@@ -42,7 +42,7 @@ This project aims to develop a system for detecting diseases in plant leaves usi
     cd Plant-Leaf-Disease-Detection-System-Using-AI-Algorithms
     ```
 
-2. **Create and activate a virtual environment:**
+2. **Create and activate a virtual environment (if needed for any Python preprocessing or training):**
 
     ```bash
     python -m venv env
@@ -52,7 +52,7 @@ This project aims to develop a system for detecting diseases in plant leaves usi
 3. **Install the required packages:**
 
     ```bash
-    pip install -r requirements.txt
+    npm install
     ```
 
 4. **Download the dataset:**
@@ -62,7 +62,7 @@ This project aims to develop a system for detecting diseases in plant leaves usi
 5. **Run the application:**
 
     ```bash
-    python app.py
+    node app.js
     ```
 
 ## Usage
